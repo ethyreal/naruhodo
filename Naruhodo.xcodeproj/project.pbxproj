@@ -10,6 +10,13 @@
 		E799214023F330F800E0EFAA /* Naruhodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799213623F330F800E0EFAA /* Naruhodo.framework */; };
 		E799214523F330F800E0EFAA /* NaruhodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799214423F330F800E0EFAA /* NaruhodoTests.swift */; };
 		E799214723F330F800E0EFAA /* Naruhodo.h in Headers */ = {isa = PBXBuildFile; fileRef = E799213923F330F800E0EFAA /* Naruhodo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7E38C0223F34FF90098C7BD /* naruhodo_configuration.json in Resources */ = {isa = PBXBuildFile; fileRef = E7E38C0123F34FF90098C7BD /* naruhodo_configuration.json */; };
+		E7E38C0423F350590098C7BD /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E38C0323F350590098C7BD /* ConfigurationTests.swift */; };
+		E7E38C0623F351DD0098C7BD /* Result+Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E38C0523F351DD0098C7BD /* Result+Debugging.swift */; };
+		E7E38C0823F3523F0098C7BD /* NaruhodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E38C0723F3523F0098C7BD /* NaruhodoService.swift */; };
+		E7F7271723F346EC0022E011 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7271623F346EC0022E011 /* Configuration.swift */; };
+		E7F7271A23F349E90022E011 /* JsonConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7271923F349E90022E011 /* JsonConversion.swift */; };
+		E7F7271C23F34A300022E011 /* Bundle+Querying.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7271B23F34A300022E011 /* Bundle+Querying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		E799213F23F330F800E0EFAA /* NaruhodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaruhodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E799214423F330F800E0EFAA /* NaruhodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaruhodoTests.swift; sourceTree = "<group>"; };
 		E799214623F330F800E0EFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7E38C0123F34FF90098C7BD /* naruhodo_configuration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = naruhodo_configuration.json; sourceTree = "<group>"; };
+		E7E38C0323F350590098C7BD /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		E7E38C0523F351DD0098C7BD /* Result+Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Debugging.swift"; sourceTree = "<group>"; };
+		E7E38C0723F3523F0098C7BD /* NaruhodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaruhodoService.swift; sourceTree = "<group>"; };
+		E7F7271623F346EC0022E011 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Configuration/Configuration.swift; sourceTree = "<group>"; };
+		E7F7271923F349E90022E011 /* JsonConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonConversion.swift; sourceTree = "<group>"; };
+		E7F7271B23F34A300022E011 /* Bundle+Querying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Querying.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,7 @@
 		E799212C23F330F800E0EFAA = {
 			isa = PBXGroup;
 			children = (
+				E7F7271423F3453E0022E011 /* Configuration */,
 				E799213823F330F800E0EFAA /* Naruhodo */,
 				E799214323F330F800E0EFAA /* NaruhodoTests */,
 				E799213723F330F800E0EFAA /* Products */,
@@ -71,6 +86,9 @@
 		E799213823F330F800E0EFAA /* Naruhodo */ = {
 			isa = PBXGroup;
 			children = (
+				E7F7271623F346EC0022E011 /* Configuration.swift */,
+				E7E38C0723F3523F0098C7BD /* NaruhodoService.swift */,
+				E7F7271823F349B20022E011 /* Shared */,
 				E799213923F330F800E0EFAA /* Naruhodo.h */,
 				E799213A23F330F800E0EFAA /* Info.plist */,
 			);
@@ -82,8 +100,27 @@
 			children = (
 				E799214423F330F800E0EFAA /* NaruhodoTests.swift */,
 				E799214623F330F800E0EFAA /* Info.plist */,
+				E7E38C0323F350590098C7BD /* ConfigurationTests.swift */,
 			);
 			path = NaruhodoTests;
+			sourceTree = "<group>";
+		};
+		E7F7271423F3453E0022E011 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E7E38C0123F34FF90098C7BD /* naruhodo_configuration.json */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		E7F7271823F349B20022E011 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E7F7271923F349E90022E011 /* JsonConversion.swift */,
+				E7F7271B23F34A300022E011 /* Bundle+Querying.swift */,
+				E7E38C0523F351DD0098C7BD /* Result+Debugging.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +185,7 @@
 				TargetAttributes = {
 					E799213523F330F800E0EFAA = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					E799213E23F330F800E0EFAA = {
 						CreatedOnToolsVersion = 11.3;
@@ -178,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E38C0223F34FF90098C7BD /* naruhodo_configuration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F7271723F346EC0022E011 /* Configuration.swift in Sources */,
+				E7F7271C23F34A300022E011 /* Bundle+Querying.swift in Sources */,
+				E7F7271A23F349E90022E011 /* JsonConversion.swift in Sources */,
+				E7E38C0623F351DD0098C7BD /* Result+Debugging.swift in Sources */,
+				E7E38C0823F3523F0098C7BD /* NaruhodoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E38C0423F350590098C7BD /* ConfigurationTests.swift in Sources */,
 				E799214523F330F800E0EFAA /* NaruhodoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +385,7 @@
 		E799214B23F330F800E0EFAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethyreal.Naruhodo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +410,7 @@
 		E799214C23F330F800E0EFAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +434,7 @@
 		E799214E23F330F800E0EFAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NaruhodoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +452,7 @@
 		E799214F23F330F800E0EFAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NaruhodoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
