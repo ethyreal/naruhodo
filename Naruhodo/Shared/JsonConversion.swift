@@ -8,6 +8,10 @@
 
 import Foundation
 
+
+public typealias JsonDictionary = [String: Any]
+
+
 public func dataFromJsonFile(_ fileName: String, in bundle: Bundle) -> Result<Data, Error> {
     return urlForJsonFile(fileName, in: bundle)
         .flatMap(trace)
@@ -16,4 +20,24 @@ public func dataFromJsonFile(_ fileName: String, in bundle: Bundle) -> Result<Da
 
 public func dataForURL(_ url: URL) -> Result<Data, Error> {
     Result { try Data(contentsOf: url) }
+}
+
+public func jsonDictionaryFromData(_ data: Data) -> Result<JsonDictionary, Error> {
+    return data.toJsonDictionary()
+}
+
+enum JSONError: Error {
+    case dictionaryConversion
+    case stringSerialization
+}
+
+extension Data {
+    
+    public func toJsonDictionary(options: JSONSerialization.ReadingOptions = .mutableContainers) -> Result<JsonDictionary, Error> {
+        return Result {
+            let obj = try JSONSerialization.jsonObject(with: self, options: options)
+            guard let json = obj as? JsonDictionary else { throw JSONError.dictionaryConversion }
+            return json
+        }
+    }
 }
