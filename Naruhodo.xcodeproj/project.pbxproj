@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71093A223F4882B006CF596 /* summary_get_v2_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E71093A123F4882B006CF596 /* summary_get_v2_response.json */; };
+		E71093A623F4D21C006CF596 /* API.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71093A523F4D21C006CF596 /* API.Response.swift */; };
+		E71093A823F4D3C7006CF596 /* APIResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71093A723F4D3C7006CF596 /* APIResponseTests.swift */; };
 		E799214023F330F800E0EFAA /* Naruhodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799213623F330F800E0EFAA /* Naruhodo.framework */; };
 		E799214523F330F800E0EFAA /* NaruhodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799214423F330F800E0EFAA /* NaruhodoTests.swift */; };
 		E799214723F330F800E0EFAA /* Naruhodo.h in Headers */ = {isa = PBXBuildFile; fileRef = E799213923F330F800E0EFAA /* Naruhodo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E71093A123F4882B006CF596 /* summary_get_v2_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = summary_get_v2_response.json; sourceTree = "<group>"; };
+		E71093A523F4D21C006CF596 /* API.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.Response.swift; sourceTree = "<group>"; };
+		E71093A723F4D3C7006CF596 /* APIResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseTests.swift; sourceTree = "<group>"; };
 		E799213623F330F800E0EFAA /* Naruhodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Naruhodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E799213923F330F800E0EFAA /* Naruhodo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Naruhodo.h; sourceTree = "<group>"; };
 		E799213A23F330F800E0EFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E71093A023F487EA006CF596 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E71093A123F4882B006CF596 /* summary_get_v2_response.json */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		E799212C23F330F800E0EFAA = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,7 @@
 				E799213A23F330F800E0EFAA /* Info.plist */,
 				E7E38C0923F35C000098C7BD /* Summary.swift */,
 				E7E38C0D23F369A10098C7BD /* API.swift */,
+				E71093A523F4D21C006CF596 /* API.Response.swift */,
 			);
 			path = Naruhodo;
 			sourceTree = "<group>";
@@ -117,6 +132,7 @@
 				E799214623F330F800E0EFAA /* Info.plist */,
 				E7E38C0323F350590098C7BD /* ConfigurationTests.swift */,
 				E7E38C1123F36A470098C7BD /* SummaryTests.swift */,
+				E71093A723F4D3C7006CF596 /* APIResponseTests.swift */,
 			);
 			path = NaruhodoTests;
 			sourceTree = "<group>";
@@ -124,6 +140,7 @@
 		E7E38C1323F36B8D0098C7BD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				E71093A023F487EA006CF596 /* Responses */,
 				E7E38C1423F36BA50098C7BD /* MockConfiguration.swift */,
 			);
 			path = Mocks;
@@ -250,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71093A223F4882B006CF596 /* summary_get_v2_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +286,7 @@
 				E7E38C0623F351DD0098C7BD /* Result+Debugging.swift in Sources */,
 				E7E38C0A23F35C000098C7BD /* Summary.swift in Sources */,
 				E7E38C0E23F369A10098C7BD /* API.swift in Sources */,
+				E71093A623F4D21C006CF596 /* API.Response.swift in Sources */,
 				E7E38C0823F3523F0098C7BD /* NaruhodoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E38C1523F36BA50098C7BD /* MockConfiguration.swift in Sources */,
+				E71093A823F4D3C7006CF596 /* APIResponseTests.swift in Sources */,
 				E7E38C0423F350590098C7BD /* ConfigurationTests.swift in Sources */,
 				E799214523F330F800E0EFAA /* NaruhodoTests.swift in Sources */,
 				E7E38C1223F36A470098C7BD /* SummaryTests.swift in Sources */,
