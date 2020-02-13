@@ -22,6 +22,11 @@ public func dataForURL(_ url: URL) -> Result<Data, Error> {
     Result { try Data(contentsOf: url) }
 }
 
+public func jsonDictionaryFromJsonFile(_ fileName: String, in bundle: Bundle = Bundle.main) -> Result<JsonDictionary, Error> {
+    return dataFromJsonFile(fileName, in: bundle)
+        .flatMap(jsonDictionaryFromData)
+}
+
 public func jsonDictionaryFromData(_ data: Data) -> Result<JsonDictionary, Error> {
     return data.toJsonDictionary()
 }
