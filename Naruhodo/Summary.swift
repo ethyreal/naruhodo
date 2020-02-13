@@ -33,7 +33,7 @@ func summaryDTOFromData(_ data: Data) -> Result<SummaryDTO, Error> {
     Result {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(API.Response.dateFormatter)
-        //decoder.dateDecodingStrategy = .iso8601
+        //decoder.dateDecodingStrategy =
         return try decoder.decode(SummaryDTO.self, from: data)
     }
 }

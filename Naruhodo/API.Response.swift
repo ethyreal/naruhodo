@@ -15,7 +15,7 @@ extension API {
         
         static var dateFormatter: DateFormatter = {
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSZ"
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSZ" // because system .iso8601 doesn't like the milliseconds
             return formatter
         }()
     }
